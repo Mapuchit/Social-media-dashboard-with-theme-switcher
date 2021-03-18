@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://mapuchit.github.io/Social-media-dashboard-with-theme-switcher/)
+- Solution URL: https://mapuchit.github.io/Social-media-dashboard-with-theme-switcher/
 
 ## My process
 
