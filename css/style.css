@@ -1,0 +1,323 @@
+/* general styles */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg_pattern {
+    width: 100%;
+    height: 280px;
+    border-radius: 0px 0px 30px 30px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#header {
+    position: relative;
+    max-width: 320px;
+    margin: 40px auto 20px;
+    line-height: 35px;
+}
+
+hr {
+    max-width: 320px;
+    margin: 20px auto;
+    border-top: 1px solid hsl(228, 12%, 44%);
+}
+
+#toggle {
+    position: relative;
+    max-width: 320px;
+    margin: 20px auto 40px;
+}
+
+.secondary_text_colour {
+    font-weight: 700;
+}
+
+
+/* toggle switch */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    float: right;
+    top: -6px;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(230, 22%, 74%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 5px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* cards */
+
+.big_card {
+    position: relative;
+    max-width: 320px;
+    height: 220px;
+    margin: 30px auto;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.social_media {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#facebook {
+    background-color: hsl(208, 92%, 53%);
+}
+
+#twitter {
+    background-color: hsl(203, 89%, 53%);
+}
+
+#instagram {
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+#youtube {
+    background-color: hsl(348, 97%, 39%);
+}
+
+.thumbnail {
+    margin-right: 10px;
+    width: 25px;
+    position: relative;
+    top: 5px;
+}
+
+.big_numbers {
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-top: 10px;
+}
+
+.big_card p {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.arrow {
+    margin-right: 5px;
+    position: relative;
+    bottom: 4px;
+}
+
+.up {
+    font-weight: 700;
+    color: hsl(163, 72%, 41%);
+}
+
+.down {
+    font-weight: 700;
+    color: hsl(356, 69%, 56%);
+}
+
+h1.secondary_text_colour {
+    max-width: 320px;
+    margin: 20px auto;
+}
+
+.small_card {
+    position: relative;
+    max-width: 320px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 7px;
+    padding: 25px;
+}
+
+.small_numbers {
+    font-weight: 700;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 20px;
+}
+
+.small_thumbnail {
+    width: 25px;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+}
+
+.small_card > .up, .small_card > .down {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+
+/* media queries */
+
+@media only screen and (min-width: 1200px) {
+    /* for laptops/desktops */
+    #header {
+        max-width: 1200px;
+    }
+    hr {
+        display: none;
+    }
+    #toggle {
+        max-width: 1200px;
+        text-align: right;
+        position: relative;
+        bottom: 65px;
+        margin-bottom: 30px;
+    }
+    .switch {
+        margin-left: 15px;
+    }
+    #big_card_container {
+        max-width: 1200px;
+        height: 220px;
+        margin: 0 auto 40px;
+    }
+    .big_card {
+        display: inline-block;
+        vertical-align: middle;
+        width: 270px;
+        height: 220px;
+        margin: 0 17px;
+    }
+    .big_card:first-child, .small_card:first-child, .small_card:nth-child(5) {
+        margin-left: 0;
+    }
+    .big_card:last-child, .small_card:nth-child(4), .small_card:last-child {
+        margin-right: 0;
+    }
+    h1.secondary_text_colour {
+        max-width: 1200px;
+        margin: 50px auto 30px;
+    }
+    #small_card_container {
+        max-width: 1200px;
+        height: 350px;
+        margin: 0 auto 40px;
+    }
+    .small_card {
+        display: inline-block;
+        width: 275px;
+        height: 150px;
+        margin: 10px 14px 14px;
+    }
+}
+
+/* light mode */
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+#bg_pattern { 
+    background-color: hsl(225, 100%, 98%);
+}
+
+.big_card, .small_card {
+    background-color: hsl(227, 47%, 96%);
+}
+
+.big_card:hover, .small_card:hover {
+    cursor: pointer;
+    background-color: hsl(227, 47%, 92%);
+}
+
+.secondary_text_colour {
+    color: hsl(228, 12%, 44%);
+}
+
+
+/* dark mode */
+
+
+.dark_body {
+    background-color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.dark_bg_pattern { 
+    background-color: hsl(232, 19%, 15%);
+}
+
+.dark_card_bg {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.dark_card_bg:hover {
+    cursor: pointer;
+    background-color: hsl(228, 28%, 24%);
+}
+
+.dark_secondary_text_colour {
+    color: hsl(228, 34%, 66%);
+}
+
+.dark_slider:before {
+    background-color: hsl(230, 17%, 14%);
+}
