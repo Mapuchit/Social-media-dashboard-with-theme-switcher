@@ -275,7 +275,7 @@ body {
     color: hsl(230, 17%, 14%);
 }
 
-#bg_pattern { 
+.bg_pattern { 
     background-color: hsl(225, 100%, 98%);
 }
 
